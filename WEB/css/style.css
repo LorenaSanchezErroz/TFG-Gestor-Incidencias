@@ -1,0 +1,16 @@
+.ingreso-group {
+    position: relative;
+    margin-bottom: 15px;
+
+}
+
+.bi {
+    vertical-align: middle;
+    /* ajuste visuall para meterlo dentro del input*/
+    z-index: 10;
+    position: relative;
+}
+
+.logo {
+    width: 100%;
+}
