@@ -57,9 +57,10 @@ header {
 
 /* Logotipo */
 .icono {
-    max-width: 160px; /* Tamaño controlado */
+    max-width: 220px; /* Tamaño controlado */
     height: auto;
     display: block;
+    cursor: pointer;
 }
 
 /* Menú de navegación */
