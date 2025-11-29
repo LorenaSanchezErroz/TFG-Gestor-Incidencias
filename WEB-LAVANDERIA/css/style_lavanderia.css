@@ -1,0 +1,143 @@
+/* --- Variables de colores para mantener coherencia ---*/
+:root {
+    --color-azul: #2ea3f2; /* Azul de Bóreas*/
+    --color-gris: #666666;
+    --fuente-principal: Open Sans,Arial,sans-serif;
+}
+
+
+.ingreso-group {
+    position: relative;
+    margin-bottom: 15px;
+
+}
+/*--------------------------*/
+/*---Estilos generales---*/
+/*--------------------------*/
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--fuente-principal);
+    background-color: #ffffff;
+    /* Flexbox vertical paraque el posible footer o el contenido se ajusten */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+}
+/*----------------------*/
+/*---Estilos Index ---*/
+/*---------------------*/
+.bi {
+    vertical-align: middle;
+    /* ajuste visuall para meterlo dentro del input*/
+    z-index: 10;
+    position: relative;
+}
+
+.logo {
+    width: 100%;
+}
+
+/*----------------------------------------*/
+/*---Estilos generales otras páginas ---*/
+/*---------------------------------------*/
+
+/*--- Cabecera ---*/
+header {
+    display: flex;
+    justify-content: space-between; /*Logo a la izq y Menú a la dcha */
+    align-items: center;
+    padding: 15px 5%; /* % para que sea fluido en pantalla anchas */
+    background-color: #ffffff;
+    /*Sombra sutil para separar fondo*/
+    box-shadow: 0 2px 10px rgb(0, 0, 0, o.5);
+
+}
+
+/* Logotipo */
+.icono {
+    max-width: 220px; /* Tamaño controlado */
+    height: auto;
+    display: block;
+    cursor: pointer;
+}
+
+/* Menú de navegación */
+.menu {
+    display: flex;
+    gap: 30px; /* Espacio entre enlaces */
+    align-items: center;
+}
+
+.menu a {
+    text-decoration: none;
+    color: var(--color-gris);
+    font-size: 1rem;
+    font-weight: 400;
+    transition: color 0.3 ease;
+}
+
+/* Hover */
+.menu a:hover {
+    color: var(--color-azul);
+}
+
+/* --- Contenido principal centrado --- */
+.container {
+    flex: 1; /* Ocupa todo el espacio vertical sobrante */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centrado vertical */
+    align-items: center; /* Centrado horizontal */
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    color: var(--color-azul);
+    font-size: 400;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+/*----------------------*/
+/*--- RESPONSIVE ---*/
+/*----------------------*/
+
+@media (max-width: 768px) {
+    /* Cuando la pantalla mida de 768px o menos*/
+
+    header {
+        flex-direction: column; /*Cambia a columna: Lofo arriba, nebú abajo */
+        padding: 20px;
+        padding: 20px;
+    }
+
+    .menu {
+        flex-direction: column; /* enlaces uno debajo de otro */
+        gap: 15px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .menu a {
+        display: block; /* para falicitar el toque con el dedo */
+        padding: 5px 0;
+        border-radius: 1px solid #f0f0f0; /* Separador sutil en móvil */
+        width: 100%;
+    }
+
+    .menu a:last-child {
+        border-bottom: none;
+    }
+
+    .icono {
+        max-width: 140px; /* Logo un poco má pequeño */
+    }
+
+    h1 {
+        font-size: 1.2rem; /* Texto central un poco más pequeño */
+    }
+}
